@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  const apiUrl = 'http://api.open-notify.org/astros.json'
+  const apiUrl = 'https://corquaid.github.io/international-space-station-APIs/JSON/people-in-space.json'
   const peopleInSpace = document.getElementById('peopleInSpace')
   
   fetch(apiUrl, {mode: 'cors'})
