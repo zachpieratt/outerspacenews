@@ -1,0 +1,22 @@
+{
+  "name": "outerspacenews.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachpieratt/outerspacenews.git"
+  },
+  "author": "Zach Pieratt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachpieratt/outerspacenews/issues"
+  },
+  "homepage": "https://github.com/zachpieratt/outerspacenews#readme",
+  "dependencies": {
+    "axios": "^1.7.4"
+  }
+}
