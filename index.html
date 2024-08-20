@@ -8,73 +8,78 @@
 <body>
     <div id="top"></div>
     <h1 class="topHeader">Outer Space News</h1>
-    <input class="navButton"type="button" value="Bottom Of Page"onClick="document.getElementById('bottom').scrollIntoView();" />
+    <input class="navButton" type="button" value="Bottom Of Page"
+        onClick="document.getElementById('bottom').scrollIntoView();" />
     <div id="peopleInSpace"></div>
     <div class="container">
-    <div class="tabs">
-        <span data-tab-value="#tab_1">Nasa Image Of The Day</span>
-        <span data-tab-value="#tab_2">Nasa News Releases</span>
-        <span data-tab-value="#tab_3">International Space Station</span>
-        <span data-tab-value="#tab_4">SpaceX</span>
-        <span data-tab-value="#tab_5">European Space Agency (ESA)</span>
-        <span data-tab-value="#tab_6">US Space Force</span>
-    </div>
-
-    <div class="tab-content">
-        <div class="tabs__tab active" id="tab_1" data-tab-info>
-            <p>
-                <script
-                    src="//rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&limit=20&showicon=true&type=js"></script>
-            </p>
-
+        <div class="tabs">
+            <span data-tab-value="#tab_1">Nasa Image Of The Day</span>
+            <span data-tab-value="#tab_2">Nasa News Releases</span>
+            <span data-tab-value="#tab_3">International Space Station</span>
+            <span data-tab-value="#tab_4">SpaceX</span>
+            <span data-tab-value="#tab_5">European Space Agency (ESA)</span>
+            <span data-tab-value="#tab_6">US Space Force</span>
         </div>
-        <div class="tabs__tab" id="tab_2" data-tab-info>
-            <p>
-                <script
-                    src="//rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Fnews-release%2Ffeed%2F&limit=20&showicon=true&type=js"></script>
-            </p>
 
-        </div>
-        <div class="tabs__tab" id="tab_3" data-tab-info>
-            <p>
-                <script
-                    src="//rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Fmissions%2Fstation%2Ffeed%2F&limit=20&showicon=true&type=js"></script>
-            </p>
+        <div class="tab-content">
+            <div class="tabs__tab active" id="tab_1" data-tab-info>
+                <p>
+                    <script
+                        src="//rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&limit=20&showicon=true&type=js"></script>
+                </p>
 
-        </div>
-        <div class="tabs__tab" id="tab_4" data-tab-info>
-            <p>
-                <script
-                    src="//rss.bloople.net/?url=https%3A%2F%2Fspacenews.com%2Ftag%2Fspacex%2Ffeed%2F&limit=20&showicon=true&type=js"></script>
-            </p>
+            </div>
+            <div class="tabs__tab" id="tab_2" data-tab-info>
+                <p>
+                    <script
+                        src="//rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Fnews-release%2Ffeed%2F&limit=20&showicon=true&type=js"></script>
+                </p>
 
-        </div>
-        <div class="tabs__tab" id="tab_5" data-tab-info>
-            <p>
-                <script
-                    src="//rss.bloople.net/?url=https%3A%2F%2Fwww.esa.int%2Frssfeed%2FTopNews&limit=20&showicon=true&type=js"></script>
-            </p>
+            </div>
+            <div class="tabs__tab" id="tab_3" data-tab-info>
+                <p>
+                    <script
+                        src="//rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Fmissions%2Fstation%2Ffeed%2F&limit=20&showicon=true&type=js"></script>
+                </p>
 
-        </div>
-        <div class="tabs__tab" id="tab_6" data-tab-info>
-            <p>
-                <script
-                    src="//rss.bloople.net/?url=https%3A%2F%2Fwww.spaceforce.mil%2FDesktopModules%2FArticleCS%2FRSS.ashx%3FContentType%3D1%26Site%3D1%26isdashboardselected%3D0%26max%3D20&limit=20&showicon=true&type=js"></script>
-            </p>
+            </div>
+            <div class="tabs__tab" id="tab_4" data-tab-info>
+                <p>
+                    <script
+                        src="//rss.bloople.net/?url=https%3A%2F%2Fspacenews.com%2Ftag%2Fspacex%2Ffeed%2F&limit=20&showicon=true&type=js"></script>
+                </p>
 
+            </div>
+            <div class="tabs__tab" id="tab_5" data-tab-info>
+                <p>
+                    <script
+                        src="//rss.bloople.net/?url=https%3A%2F%2Fwww.esa.int%2Frssfeed%2FTopNews&limit=20&showicon=true&type=js"></script>
+                </p>
+
+            </div>
+            <div class="tabs__tab" id="tab_6" data-tab-info>
+                <p>
+                    <script
+                        src="//rss.bloople.net/?url=https%3A%2F%2Fwww.spaceforce.mil%2FDesktopModules%2FArticleCS%2FRSS.ashx%3FContentType%3D1%26Site%3D1%26isdashboardselected%3D0%26max%3D20&limit=20&showicon=true&type=js"></script>
+                </p>
+
+            </div>
         </div>
-    </div>
-    </div>
-    <div class="disclosure">
-        <p>This website is not owned by or affiliated with NASA, SpaceX, ESA, United States Space Force, or SpaceNews. All content provided is for educational purposes only. <br> All articles are sourced via public RSS feeds provided by the previously mentioned organizations or by independant news sources.</p>
-        <p>Page Owner: Zach Pieratt <br><a style="font-size: x-large; color: white;" href=https://github.com/zachpieratt/outerspacenews.io>GitHub</a></p>|
     </div>
     <div class="disclosure">
+        <p>This website is not owned by or affiliated with NASA, SpaceX, ESA, United States Space Force, or SpaceNews.
+            All content provided is for educational purposes only. <br> All articles are sourced via public RSS feeds
+            provided by the previously mentioned organizations or by independant news sources.</p>
+        <p>Page Owner: Zach Pieratt <br><a style="font-size: x-large; color: white;"
+                href=https://github.com/zachpieratt/outerspacenews.io>GitHub</a></p>|
     </div>
-    <input class="navButton"type="button" value="Return to Top"onClick="document.getElementById('top').scrollIntoView();" />
+    <div class="disclosure">
+    </div>
+    <input class="navButton" type="button" value="Return to Top"
+        onClick="document.getElementById('top').scrollIntoView();" />
     <div id="bottom"></div>
-    <script type="text/javascript" src="src/script.js"></script>
     <script type="text/javascript" src="/src/fetch.js"></script>
+    <script type="text/javascript" src="src/script.js"></script>
 </body>
 
 </html>

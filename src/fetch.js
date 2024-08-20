@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const apiUrl = 'http://api.open-notify.org/astros.json'
   const peopleInSpace = document.getElementById('peopleInSpace')
   
-  fetch(apiUrl)
+  fetch(apiUrl, {mode: 'cors'})
     .then(response => response.json())
     .then(data => {
       const { number, people } = data;
