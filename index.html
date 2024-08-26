@@ -3,7 +3,7 @@
 
 <head>
     <meta name="google-site-verification" content="ih5tpWu5vesk-29vDEAuMgbHLZMw9xKm7ymQbp-iB7k" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="fetch.js"></script>
@@ -23,6 +23,7 @@
             <span data-tab-value="#tab_4">SpaceX</span>
             <span data-tab-value="#tab_5">European Space Agency (ESA)</span>
             <span data-tab-value="#tab_6">US Space Force</span>
+            <span data-tab-value="#tab_7">Upcoming Rocket Launches</span>
         </div>
 
         <div class="tab-content">
@@ -66,6 +67,11 @@
                     <script
                         src="//rss.bloople.net/?url=https%3A%2F%2Fwww.spaceforce.mil%2FDesktopModules%2FArticleCS%2FRSS.ashx%3FContentType%3D1%26Site%3D1%26isdashboardselected%3D0%26max%3D20&limit=20&showicon=true&type=js"></script>
                 </p>
+
+            </div>
+            <div class="tabs__tab" id="tab_7" data-tab-info>
+                <div id="upcomingLaunches"></div>
+
 
             </div>
         </div>
