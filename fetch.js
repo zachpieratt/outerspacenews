@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
          <td>${item.name}</td> 
          <td>${item.date_str}</td>
          <td>${item.launch_description}</td>
-         <td>${item.pad.name} <br> ${item.pad.location.name} <br> ${item.pad.location.statename}</td>
+         <td>${item.pad.name} <br> ${item.pad.location.name || ''} <br> ${item.pad.location.statename || ''}</td>
          <td><a href="${item.quicktext.replace(' for info/stream', '').split("- ").pop()}">${item.quicktext.replace(' for info/stream', '').split("- ").pop()}</a></td>
         </tr>`
           )
