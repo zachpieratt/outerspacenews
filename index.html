@@ -4,12 +4,15 @@
 <head>
     <meta name="google-site-verification" content="nilhlKOxEC1tLEtiGnOzsWYoTYGcxRVBFbsCLk3cZuo" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="module" src="fetch.js"></script>
+    <script type="module" src="src/fetch.js"></script>
+    <div class="loader"></div>
+    <script src="src/loader.js"></script>
 </head>
 
 <body>
+    
     <div id="top"></div>
     <h1 class="topHeader">Outer Space News</h1>
     <input class="navButton" type="button" value="Bottom Of Page"
@@ -88,7 +91,7 @@
     <input class="navButton" type="button" value="Return to Top"
         onClick="document.getElementById('top').scrollIntoView();" />
     <div id="bottom"></div>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="src/script.js"></script>
 </body>
 
 </html>

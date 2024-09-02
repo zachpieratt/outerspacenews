@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
 
 body {
-    background-image: url(space.png);
+    background-image: url(/images/space.png);
 }
 
 .container {
@@ -135,4 +135,37 @@ table {
   
   tbody tr:hover {
     background: #e5d2f1;
+  }
+  .loader {
+    position: fixed;
+    font-size: xx-large;
+    color: #dddddd;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    transition: opacity 0.75s, visibility 0.75s;
+
+  }
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #303481;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  @keyframes loading {
+    from { transform: rotate(0turn) }
+    to {transform: rotate(1turn)}
   }
