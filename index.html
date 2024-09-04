@@ -6,13 +6,24 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+                "three/": "https://unpkg.com/three@0.156.0/"
+            }
+        }
+    </script>
     <script type="module" src="src/fetch.js"></script>
     <div class="loader"></div>
     <script src="src/loader.js"></script>
+    
+
+
 </head>
 
 <body>
-    
+
     <div id="top"></div>
     <h1 class="topHeader">Outer Space News</h1>
     <input class="navButton" type="button" value="Bottom Of Page"
@@ -27,6 +38,7 @@
             <span data-tab-value="#tab_5">European Space Agency (ESA)</span>
             <span data-tab-value="#tab_6">US Space Force</span>
             <span data-tab-value="#tab_7">Upcoming Rocket Launches</span>
+            <span data-tab-value="#tab_8">3D Models</span>
         </div>
 
         <div class="tab-content">
@@ -75,6 +87,23 @@
             <div class="tabs__tab" id="tab_7" data-tab-info>
                 <div id="upcomingLaunches"></div>
 
+
+            </div>
+            <div class="tabs__tab" id="tab_8" data-tab-info>
+                <div id="3dModels"></div>
+                <script type="module" src="src/model.js"></script>
+                <label for="models">Choose a model:</label>
+                <select id="models" name="models">
+                    <option value="default">Choose a model</option>
+                    <option value="apolloLunarModule">Apollo Lunar Module</option>
+                    <option value="Hubble">Hubble Telescope</option>
+                    <option value="iss_stationary">Internationl Space Station</option>
+                    <option value="Perseverance">Perseverance</option>
+                    <option value="Voyager">Voyager</option>
+                </select>
+                <button class="loadButton"id="loadModel" type="button">Load Model</button>
+                <br>
+                <canvas class="webgl"></canvas>
 
             </div>
         </div>
