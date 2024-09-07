@@ -1,20 +1,18 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const loadButton = document.getElementById("loadModel");
 loadButton.addEventListener("click", initModel, false);
 
 function initModel() {
-
   const e = document.getElementById("models");
   const selectedModel = e.value;
   console.log(selectedModel);
 
   if (selectedModel == "default") {
-    console.log('No Model Selected')
+    console.log("No Model Selected");
   } else {
-
     const scene = new THREE.Scene();
     const loader = new GLTFLoader();
     loader.load(
@@ -31,16 +29,15 @@ function initModel() {
     //sizing
     const sizes = {
       width: window.innerWidth,
-      height: window.innerHeight
+      height: window.innerHeight,
     };
-
 
     // Create lights
 
     const ambientLight = new THREE.AmbientLight(0x404040, 60);
     const directionalLight = new THREE.DirectionalLight(0xffffff, 6);
     const spotLight = new THREE.SpotLight(0xffffff, 100, 5, 1, 1000);
-    spotLight.position.set(0, 10, 10)
+    spotLight.position.set(0, 10, 10);
     directionalLight.position.set(0, 10, 10);
 
     scene.add(spotLight);
@@ -49,10 +46,14 @@ function initModel() {
 
     //create camera
 
-    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 1, 1000);
+    const camera = new THREE.PerspectiveCamera(
+      45,
+      sizes.width / sizes.height,
+      1,
+      1000
+    );
     camera.position.z = 80;
     scene.add(camera);
-
 
     //create renderer
     const canvas = document.querySelector(".webgl");
@@ -61,7 +62,6 @@ function initModel() {
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(2);
     renderer.render(scene, camera);
-
 
     //controls
     const controls = new OrbitControls(camera, canvas);
@@ -73,21 +73,21 @@ function initModel() {
     controls.enableRotate = true;
 
     //resize
-    window.addEventListener('resize', () => {
-      sizes.width = window.innerWidth
-      sizes.height = window.innerHeight
+    window.addEventListener("resize", () => {
+      sizes.width = window.innerWidth;
+      sizes.height = window.innerHeight;
 
       //update camera
-      camera.aspect = sizes.width / sizes.height
-      camera.updateProjectionMatrix()
-      renderer.setSize(sizes.width, sizes.height)
+      camera.aspect = sizes.width / sizes.height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(sizes.width, sizes.height);
     });
 
     const loop = () => {
       controls.update();
       renderer.render(scene, camera);
-      window.requestAnimationFrame(loop)
-    }
-    loop()
+      window.requestAnimationFrame(loop);
+    };
+    loop();
   }
 }
